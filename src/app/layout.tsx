@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MouseTracker } from '@/components/MouseTracker';
 import Header from "@/components/Header";
+import { ParticlesComponent } from "@/components/ParticlesComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased pl-20 pr-20 pt-10 pb-20`}
-      >
+      > 
+        <ParticlesComponent/>
         <MouseTracker />
         <Header />
         {children}

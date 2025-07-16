@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import MaterialSymbolsMenu from './icons/MaterialSymbolsMenu'
 import MaterialSymbolsMenuOpen from './icons/MaterialSymbolsMenuOpen'
-import { label } from 'framer-motion/client'
+import Link from 'next/link'
 const menuItems = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'My Projects' },
@@ -49,14 +49,14 @@ export default function ResponsiveHeader() {
                 }}
                 key={item.label}
               >
-                <a
+                <Link
                   href={item.href}
-                  className={`relative text-[28px] font-bold text-white select-none 
+                  className={`relative lg:text-[28px] max-sm:text-[20px] max-md:text-[20px] font-bold text-white select-none 
                     ${isActive ? 'border-b-4 border-white' : ''}
                   `}
                 >
                   {item.label}
-                </a>
+                </Link>
               </motion.li>
             )
           })}
@@ -95,7 +95,7 @@ export default function ResponsiveHeader() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className="lg:hidden fixed top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-black/90 z-40">
+      {open && <div className="lg:hidden fixed top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-black/70 z-40">
         <AnimatePresence>
           {open && (
             <motion.ul
@@ -125,22 +125,22 @@ export default function ResponsiveHeader() {
                       }
                     }}
                   >
-                    <a
+                    <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className={`relative text-[28px] font-bold text-white select-none 
+                      className={`relative lg:text-[28px] max-sm:text-[20px] max-md:text-[20px] font-bold text-white select-none 
                         ${isActive ? 'border-b-4 border-white' : ''}
                       `}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </motion.li>
                 )
               })}
             </motion.ul>
           )}
         </AnimatePresence>
-      </div>
+      </div>}
     </div>
   )
 }

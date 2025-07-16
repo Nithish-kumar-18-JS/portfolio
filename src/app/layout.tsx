@@ -28,12 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pl-20 pr-20 pt-10 pb-20`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased 
+          sm:pl-20 sm:pr-20 sm:pt-10 sm:pb-20
+          px-4 py-4
+        `}
       > 
         <ParticlesComponent/>
-        <MouseTracker />
         <Header />
         {children}
+        <MouseTracker />
       </body>
     </html>
   );

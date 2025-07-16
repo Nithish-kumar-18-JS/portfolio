@@ -57,11 +57,10 @@ export const ParticlesComponent = () => {
       },
       particles: {
         number: {
-          value: 160,
+          value: 80,
           density: {
             enable: true,
-            width: 1920,
-            height: 1080
+            value_area: 800
           }
         },
         color: {

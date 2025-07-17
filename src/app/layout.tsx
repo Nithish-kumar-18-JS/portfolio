@@ -4,6 +4,7 @@ import "./globals.css";
 import { MouseTracker } from '@/components/MouseTracker';
 import Header from "@/components/Header";
 import { ParticlesComponent } from "@/components/ParticlesComponent";
+import CanvasCursor from "@/components/CanvasCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,7 @@ export default function RootLayout({
         <ParticlesComponent/>
         <Header />
         {children}
-        <MouseTracker />
+        <CanvasCursor/>
       </body>
     </html>
   );

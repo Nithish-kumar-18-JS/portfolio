@@ -51,7 +51,7 @@ export default function ResponsiveHeader() {
               >
                 <Link
                   href={item.href}
-                  className={`relative lg:text-[28px] max-sm:text-[20px] max-md:text-[20px] font-bold text-white select-none 
+                  className={`relative lg:text-[28px] max-sm:text-[20px] max-md:text-[20px]  text-white select-none 
                     ${isActive ? 'border-b-4 border-white' : ''}
                   `}
                 >
@@ -128,7 +128,7 @@ export default function ResponsiveHeader() {
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className={`relative lg:text-[28px] max-sm:text-[20px] max-md:text-[20px] font-bold text-white select-none 
+                      className={`relative lg:text-[28px] max-sm:text-[20px] max-md:text-[20px]  text-white select-none 
                         ${isActive ? 'border-b-4 border-white' : ''}
                       `}
                     >

@@ -16,10 +16,10 @@ const ExperienceSection = () => {
       endCircle: string,
       textClass: string
     ) => {
-      tl.to(startCircle, { opacity: 1, duration: 0.4, ease: 'power1.out' })
-        .to(lineClass, { scaleY: -1, opacity: 1, duration: 1 })
-        .to(endCircle, { opacity: 1, duration: 0.4, ease: 'power1.out' })
-        .to(textClass, { opacity: 1, duration: 0.4, ease: 'power1.out' });
+      tl.to(startCircle, { opacity: 1, duration: 0.2, ease: 'power1.out' })
+        .to(lineClass, { scaleY: -1, opacity: 1, duration: 0.5 })
+        .to(endCircle, { opacity: 1, duration: 0.2, ease: 'power1.out' })
+        .to(textClass, { opacity: 1, duration: 0.2, ease: 'power1.out' });
     };
 
     animateTimeline('.timeline_1_line', '.timeline_1_circle_start', '.timeline_1_circle_end', '.exp_text_1');
@@ -33,25 +33,25 @@ const ExperienceSection = () => {
     <div ref={container} className="flex items-center justify-center flex-col relative">
       <h1 className="text-white text-[40px]">Experience</h1>
 
-      <div className="w-[80%] h-[1200px] relative flex flex-col justify-center mt-[20%]">
+      <div className="w-[80%] h-[1200px] relative flex flex-col justify-center">
 
         {/* Timeline Items */}
         {[
-          { id: 1, left: '70px', top: '-70px', height: '300px', color: '#0065FB', rotate: '220deg' },
-          { id: 2, left: '505px', top: '-94px', height: '400px', color: '#0065FB', rotate: '-220deg' },
-          { id: 3, left: '486px', top: '-192px', height: '500px', color: '#00FF7F', rotate: '220deg' },
-          { id: 4, left: '792px', top: '-375px', height: '300px', color: '#00FF7F', rotate: '321deg' },
-          { id: 5, left: '965px', top: '-436px', height: '600px', color: '#FF0000', rotate: '213deg' },
+          { id: 1, left: '0.5%', height: '300px', color: '#0065FB', rotate: '220deg', top: '37.5%' },
+          { id: 2, left: '11.7%', height: '400px', color: '#0065FB', rotate: '321deg', top: '9.5%' },
+          { id: 3, left: '27%', height: '500px', color: '#00FF7F', rotate: '220deg', top: '27.5%' },
+          { id: 4, left: '46.5%', height: '300px', color: '#00FF7F', rotate: '321deg', top: '12.1%' },
+          { id: 5, left: '57.6%', height: '600px', color: '#FF0000', rotate: '220deg', top: '7%' },
         ].map((item) => (
           <div
             key={item.id}
-            className={`timeline_${item.id}_line absolute w-[10px]`}
+            className={`timeline_${item.id}_line absolute w-[20px]`}
             style={{
               height: item.height,
               backgroundColor: item.color,
               left: item.left,
               top: item.top,
-              transform: `rotate(${item.rotate}) scaleY(0)`,
+              transform: `rotate(${item.rotate}) scaleY(0)` as React.CSSProperties['transform'],
               transformOrigin: 'bottom',
               opacity: 0,
               boxShadow: `0 0 30px ${item.color}`,
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
               style={{
                 backgroundColor: item.color,
                 top: `calc(${item.height} - 35px)`,
-                left: '-13px',
+                left: '-10px',
                 opacity: 0,
                 boxShadow: `0 0 30px ${item.color}`,
               }}
@@ -74,32 +74,34 @@ const ExperienceSection = () => {
               style={{
                 backgroundColor: item.color,
                 top: '-8px',
-                right: '-13px',
+                right: '-10px',
                 opacity: 0,
                 boxShadow: `0 0 30px ${item.color}`,
               }}
             />
           </div>
         ))}
-
         {/* Texts */}
-        {[
-          { id: 1, left: '1%', top: '19%', text: '2020 - 2021 - Started Learning MERN Stack Completed Udemy Course' },
-          { id: 2, left: '13%', top: '-14%', text: '2020 - 2021 - Started Learning MERN Stack Completed Udemy Course' },
-          { id: 3, left: '30%', top: '26%', text: '2020 - 2021 - Started Learning MERN Stack Completed Udemy Course' },
-          { id: 4, left: '52%', top: '-20%', text: '2020 - 2021 - Started Learning MERN Stack Completed Udemy Course' },
-          { id: 5, left: '64%', top: '14%', text: '2020 - 2021 - Started Learning MERN Stack Completed Udemy Course' },
-          
-        ].map((item, i) => (
+        {[{left: '-2.5%', top: '64.5%',id: 1,text: '2020 - 2021 - Started Learning MERN Stack Completed Udemy Course',}
+        ,
+        {left: '7.7%', top: '29.5%',id: 2,text: '2021 - 2022 - Intern at App innovation technologies pvt Ltd',}
+        ,
+        {left: '23%', top: '72.5%',id: 3,text: '2022 - 2024 - MERN Stack Developer - App innovation technologies pvt ltd',}
+        ,
+        {left: '42.5%', top: '23.1%',id: 4,text: '2024(May) - 2024 (Nov) - Nodejs Developer - Top Class Entertainment Pvt ltd',}
+        ,
+        {left: '75.6%', top: '5%',id: 5,text: '2024(Nov) - Present - Full Stack Engineer - Asign Pvt ltd',}
+        ].map((i) => (
           <p
-            key={i}
-            className={`exp_text_${item.id} text-white text-[18px] w-[200px] mt-[30px] opacity-0 absolute`}
+            key={i.id}
+            className={`exp_text_${i.id} text-white text-[18px] mt-[30px] opacity-0 absolute`}
             style={{
-              left: item.left,
-              top: item.top,
+              left: i.left,
+              top: i.top,
+              width: '220px',
             }}
           >
-            {item.text}
+            {i.text}
           </p>
         ))}
       </div>

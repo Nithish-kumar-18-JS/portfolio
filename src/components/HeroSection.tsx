@@ -1,30 +1,28 @@
-'use client'
+'use client';
 
 import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
   return (
-    <div
-      className="w-full min-h-[500px] flex flex-col lg:flex-row items-center justify-center py-8 md:px-8 md:py-12 lg:px-20 lg:py-20 gap-8 md:gap-12 lg:gap-20 "
-    >
-        {/* Image Section */}
-      <div className="w-full lg:w-1/2 flex justify-center items-center relative">
+    <div className="w-full min-h-[70vh] flex flex-col xl:flex-row items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 py-12 gap-10 xl:gap-16 2xl:gap-20">
+      
+      {/* Image Section */}
+      <div className="w-full xl:w-1/2 flex justify-center items-center relative">
         <img
           src="hero-transparent.png"
-          className="w-[30%] h-[30%] object-cover rounded-lg shadow-2xl"
           alt="hero"
+          className="w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 2xl:w-96 h-auto object-contain rounded-lg shadow-2xl"
         />
-        {/* vertical line only on large screens */}
-        <div className="hidden lg:block w-[2px] h-[60%] bg-white/50 absolute top-[50%] left-[100%] transform -translate-x-1/2 -translate-y-1/2"></div>
+        {/* vertical divider (shows from xl and up) */}
+        <div className="hidden xl:block w-[2px] h-2/3 bg-white/50 absolute left-full top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       {/* Text Section */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:px-20 z-1">
-        <h1
-          className="text-xl sm:text-2xl md:text-[20px] lg:text-4xl font-normal mb-4 md:mb-6 lg:mb-8"
-        >
-          Hi, I'm <strong className="lg:text-4xl sm:text-[20px] md:text-[20px]">Nithish Kumar</strong>{' '}
-          <span className="font-bold text-2xl sm:text-xl md:text-xl lg:text-4xl text-amber-400">
+      <div className="w-full xl:w-1/2 flex flex-col justify-center items-center xl:items-start text-center xl:text-left z-10">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium mb-4 sm:mb-6 lg:mb-8">
+          Hi, I'm <strong className="text-amber-500">Nithish Kumar</strong>{' '}
+          <br className="block xl:hidden" />
+          <span className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-400">
             <Typewriter
               words={["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Express"]}
               loop={5}
@@ -36,14 +34,14 @@ export default function HeroSection() {
             />
           </span>
         </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed px-2 sm:px-4 lg:px-0">
-          “<strong className="text-lg md:text-xl">Full Stack Developer</strong>” specialized in the MERN
-          stack, building clean and modern web applications. 4+ years of
-          experience crafting scalable, high-performance solutions with{' '}
-          <strong>React</strong>, <strong>Node.js</strong>, and{' '}
-          <strong>MongoDB</strong>, <strong>Express</strong>.
+
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 sm:px-6 xl:px-0">
+          <span className="font-semibold">Full Stack Developer</span> specialized in the MERN stack,
+          building clean and modern web applications. 4+ years of experience
+          crafting scalable, high-performance solutions with{' '}
+          <strong>React</strong>, <strong>Node.js</strong>, <strong>MongoDB</strong>, and <strong>Express</strong>.
         </p>
-      </div> 
+      </div>
     </div>
   );
 }

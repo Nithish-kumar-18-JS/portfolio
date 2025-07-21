@@ -89,7 +89,7 @@ const ExperienceSection = () => {
         <p className='text-4xl font-normal text-white'>Experience</p>
       </div>
       <div className='flex flex-col justify-center items-center h-20'>
-        <button onClick={handleStart} className='border-2 border-whitet text-white px-10 py-2 rounded-full z-50 cursor-pointer'>Start</button>
+        <button onClick={handleStart} className='border-2 border-whitet text-white px-10 py-2 rounded-full z-10 cursor-pointer'>Start</button>
       </div>
       <div className='flex justify-center items-center h-full mt-20 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10' ref={containerRef}>
         <SVGComponent className='mt-100 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10 max-md:scale-165' pathRef={pathRef} shipRef={shipRef} />

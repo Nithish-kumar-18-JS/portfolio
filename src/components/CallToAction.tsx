@@ -74,7 +74,7 @@ const CallToAction: React.FC = () => {
   };
 
   return (
-    <div className="w-full  py-20 px-4">
+    <div id='contact' className="w-full  py-20 px-4">
       <div
         ref={containerRef}
         className="max-w-4xl mx-auto  backdrop-blur-lg border border-gray-700 rounded-2xl p-8 md:p-12"

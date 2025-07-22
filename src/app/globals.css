@@ -41,6 +41,150 @@ body {
 
 /* global font oxygen */
 
+/* src/components/GlassFooter.css */
+
+.footer-container {
+  /* Positioning */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* Centering Content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  /* ✨ Glassmorphism Effect ✨ */
+  background: rgba(20, 20, 20, 0.4); /* Semi-transparent background */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+
+  /* Text & Font */
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  text-align: center;
+
+  /* Set initial state for GSAP animation */
+  opacity: 0;
+}
+
+.footer-container p {
+  margin: 0;
+}
+
+.heart {
+  color: #ff4d4d; /* A nice red for the heart */
+  display: inline-block;
+  font-size: 1.1em;
+  transform: translateY(1px); /* Aligns the heart better with the text */
+}
+
+/* 📱 Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    font-size: 0.8rem;
+    padding: 0.75rem 1rem;
+  }
+}
 
 
 
+/* src/components/AboutSection.css */
+
+.about-section {
+  padding: 6rem 1rem; /* Generous padding for spacing */
+  color: #e0e0e0;
+  min-height: 100vh; /* Make section take at least the full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents content from spilling out during animation */
+}
+
+.about-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  align-items: center;
+  gap: 4rem; /* Space between text and image */
+}
+
+.about-content {
+  /* Text content will be in the first column */
+}
+
+.about-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* A decorative underline for the heading */
+.about-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 4px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* A cool blue gradient */
+}
+
+.about-text p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.1); /* Subtle glow effect */
+}
+
+/* 📱 Responsive Design for tablets and mobile */
+@media (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr; /* Stack columns on top of each other */
+    text-align: center;
+  }
+
+  .about-image-wrapper {
+    order: -1; /* Move the image to the top on mobile */
+    margin-bottom: 3rem;
+  }
+
+  .about-heading::after {
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+  }
+}

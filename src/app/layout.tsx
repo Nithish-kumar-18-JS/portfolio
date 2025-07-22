@@ -5,6 +5,7 @@ import { MouseTracker } from '@/components/MouseTracker';
 import Header from "@/components/Header";
 import { ParticlesComponent } from "@/components/ParticlesComponent";
 import CanvasCursor from "@/components/CanvasCursor";
+import GlassFooter from "@/components/GlassFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         {children}
         <CanvasCursor/>
+        <GlassFooter/>
       </body>
     </html>
   );

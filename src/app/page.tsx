@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SkillsShowCase from "@/components/SkillsShowCase";
 import AnimatedStats from "@/components/AnimatedStats";
 import CallToAction from "@/components/CallToAction";
-  
+import AboutSection from "@/components/AboutSection";  
 export default function Home() {
   return (
     <div>
@@ -16,6 +16,8 @@ export default function Home() {
        <SkillsShowCase />
        {/* Stats */}
        <AnimatedStats />
+       {/* About */}
+      <AboutSection />
        {/* Call To Action */}
        <CallToAction />
     </div>

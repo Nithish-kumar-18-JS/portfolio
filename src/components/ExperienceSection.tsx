@@ -84,7 +84,7 @@ const ExperienceSection = () => {
   
 
   return (
-    <div className='h-screen relative'>
+    <div id='experience' className='h-screen relative'>
       <div className='flex flex-col justify-center items-center h-20'>
         <p className='text-4xl font-normal text-white'>Experience</p>
       </div>

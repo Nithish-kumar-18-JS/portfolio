@@ -58,7 +58,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-2xl font-bold text-white">
-              MyPortfolio
+              <img src={'/logolatest.png'} alt="" className="w-20 h-20 object-cover max-sm:w-16 max-sm:h-16 max-md:w-20 max-md:h-20 max-lg:w-32 max-lg:h-32" />
             </a>
           </div>
 

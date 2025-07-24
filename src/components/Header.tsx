@@ -61,7 +61,6 @@ const Header: React.FC = () => {
               <img src={'/logolatest.png'} alt="" className="w-20 h-20 object-cover max-sm:w-16 max-sm:h-16 max-md:w-20 max-md:h-20 max-lg:w-32 max-lg:h-32" />
             </a>
           </div>
-
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (

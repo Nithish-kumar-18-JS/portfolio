@@ -57,7 +57,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-2xl font-bold text-white">
+            <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-2xl font-bold dark : text-white text-white">
               <img src={'/logolatest.png'} alt="" className="w-20 h-20 object-cover max-sm:w-16 max-sm:h-16 max-md:w-20 max-md:h-20 max-lg:w-32 max-lg:h-32" />
             </a>
           </div>
@@ -74,8 +74,8 @@ const Header: React.FC = () => {
                   }}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     activeLink === link.name
-                      ? 'text-white'
-                      : 'text-gray-300 hover:text-white'
+                      ? 'dark : text-white text-white'
+                      : 'text-gray-300 hover:dark : text-white text-white'
                   }`}
                 >
                   {link.name}
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:dark : text-white text-white hover:bg-gray-700 focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
                 className={`block px-3 py-2 rounded-md text-2xl font-medium ${
                   activeLink === link.name 
                     ? 'text-cyan-400' 
-                    : 'text-gray-200 hover:text-white'
+                    : 'text-gray-200 hover:dark : text-white text-white'
                 }`}
               >
                 {link.name}

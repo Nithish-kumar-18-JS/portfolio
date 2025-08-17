@@ -53,7 +53,7 @@ const SkillsShowcase: React.FC = () => {
   }, []);
 
   return (
-    <div id='skills' className="w-full max-sm:mt-30 max-md:mt-30 mt-150 py-24 px-4 font-sans text-white">
+    <div id='skills' className="w-full max-sm:mt-30 max-md:mt-30 mt-150 py-24 px-4 font-sans dark : text-white text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 md:mb-20">
           <h1 className="text-4xl md:text-5xl font-bold tracking-wider">Skills & Expertise</h1>

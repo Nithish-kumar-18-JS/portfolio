@@ -80,7 +80,7 @@ const CallToAction: React.FC = () => {
         className="max-w-4xl mx-auto  backdrop-blur-lg border border-gray-700 rounded-2xl p-8 md:p-12"
       >
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white form-element">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold dark : text-white text-white form-element">Get In Touch</h2>
           <p className="text-gray-400 mt-3 form-element">
             Have a project in mind or just want to say hello? Drop me a line.
           </p>
@@ -99,7 +99,7 @@ const CallToAction: React.FC = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 required
-                className="w-full bg-gray-800/60 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                className="w-full bg-gray-800/60 border border-gray-600 rounded-lg px-4 py-3 dark : text-white text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
               />
             </div>
             <div className="form-element">
@@ -113,7 +113,7 @@ const CallToAction: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-gray-800/60 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                className="w-full bg-gray-800/60 border border-gray-600 rounded-lg px-4 py-3 dark : text-white text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
               />
             </div>
           </div>
@@ -129,14 +129,14 @@ const CallToAction: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full bg-gray-800/60 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+              className="w-full bg-gray-800/60 border border-gray-600 rounded-lg px-4 py-3 dark : text-white text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
             ></textarea>
           </div>
 
           <div className="text-center form-element">
             <button
               type="submit"
-              className="bg-cyan-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-cyan-500"
+              className="bg-cyan-500 dark : text-white text-white font-bold py-3 px-8 rounded-lg hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-cyan-500"
             >
               Send Message
             </button>

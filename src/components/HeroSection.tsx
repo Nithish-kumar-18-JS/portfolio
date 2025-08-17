@@ -35,7 +35,7 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 sm:px-6 xl:px-0">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl dark : text-white text-white dark:text-gray-300 leading-relaxed px-4 sm:px-6 xl:px-0">
           <span className="font-semibold">Full Stack Developer</span> specialized in the MERN stack,
           building clean and modern web applications. 4+ years of experience
           crafting scalable, high-performance solutions with{' '}

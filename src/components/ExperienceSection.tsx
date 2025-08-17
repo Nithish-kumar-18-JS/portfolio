@@ -86,10 +86,10 @@ const ExperienceSection = () => {
   return (
     <div id='experience' className='h-screen relative'>
       <div className='flex flex-col justify-center items-center h-20'>
-        <p className='text-4xl font-normal text-white'>Experience</p>
+        <p className='text-4xl font-normal dark : text-white text-white'>Experience</p>
       </div>
       <div className='flex flex-col justify-center items-center h-20'>
-        <button onClick={handleStart} className='border-2 border-whitet text-white px-10 py-2 rounded-full z-10 cursor-pointer'>Start</button>
+        <button onClick={handleStart} className='border-2 border-whitet dark : text-white text-white px-10 py-2 rounded-full z-10 cursor-pointer'>Start</button>
       </div>
       <div className='flex justify-center items-center h-full mt-20 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10' ref={containerRef}>
         <SVGComponent className='mt-100 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10 max-md:scale-150' pathRef={pathRef} shipRef={shipRef} />
@@ -149,7 +149,7 @@ const ExperienceSection = () => {
             max-w-xs
             mx-auto
           ">
-          <p className="text-center text-sm max-sm:text-[8px] max-md:text-[10px] max-lg:text-[12px] max-xl:text-[12px] w-full max-w-[200px] max:sm:w-[120px] max:md:w-[200px] max:lg:w-[250px] max:xl:w-[250px]">{exp.title}</p>
+          <p className="text-white text-center text-sm max-sm:text-[8px] max-md:text-[10px] max-lg:text-[12px] max-xl:text-[12px] w-full max-w-[200px] max:sm:w-[120px] max:md:w-[200px] max:lg:w-[250px] max:xl:w-[250px]">{exp.title}</p>
           <img src={exp.image} alt="" className="w-32 h-32 object-cover max-sm:w-20 max-sm:h-20 max-md:w-20 max-md:h-20 max-lg:w-32 max-lg:h-32 max-xl:w-32 max-xl:h-32" />
         </div>
       </React.Fragment>
@@ -169,7 +169,7 @@ const ExperienceSection = () => {
             max-w-xs
             mx-auto
           ">
-          <p className="text-center text-sm max-sm:text-[8px] max-md:text-[10px] max-lg:text-[12px] max-xl:text-[12px] z-100 w-full max-w-[200px] max:sm:w-[110px] max:md:w-[110px] max:lg:w-[250px] max:xl:w-[250px]">{exp.title}</p>
+          <p className="text-white text-center text-sm max-sm:text-[8px] max-md:text-[10px] max-lg:text-[12px] max-xl:text-[12px] z-100 w-full max-w-[200px] max:sm:w-[110px] max:md:w-[110px] max:lg:w-[250px] max:xl:w-[250px]">{exp.title}</p>
           <img src={exp.image} alt="" className="w-32 h-32 object-cover max-sm:w-16 max-sm:h-16 max-md:w-20 max-md:h-20 max-lg:w-32 max-lg:h-32 max-xl:w-32 max-xl:h-32" />
         </div>
         <div className="block"></div>

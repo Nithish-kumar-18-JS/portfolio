@@ -66,7 +66,7 @@ const AnimatedStats: React.FC = () => {
           {statsData.map((stat, index) => (
             <div key={stat.label} className="mx-auto flex max-w-xs flex-col gap-y-4">
               <dt className="text-base leading-7 text-gray-400">{stat.label}</dt>
-              <dd className="order-first text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+              <dd className="order-first text-5xl font-semibold tracking-tight dark : text-white text-white sm:text-6xl">
                 <span ref={(el) => (numberRefs.current[index] = el)}>0</span>+
               </dd>
             </div>

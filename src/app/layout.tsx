@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import { ParticlesComponent } from "@/components/ParticlesComponent";
 import CanvasCursor from "@/components/CanvasCursor";
 import GlassFooter from "@/components/GlassFooter";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,11 +36,13 @@ export default function RootLayout({
           px-4 py-4
         `}
       > 
+      <ThemeProvider enableSystem={true} defaultTheme="dark">
         <ParticlesComponent/>
         <Header />
         {children}
         <CanvasCursor/>
         <GlassFooter/>
+      </ThemeProvider>
       </body>
     </html>
   );

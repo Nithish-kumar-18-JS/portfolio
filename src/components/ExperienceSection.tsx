@@ -92,22 +92,21 @@ const ExperienceSection = () => {
         <button onClick={handleStart} className='border-2 border-whitet text-white px-10 py-2 rounded-full z-10 cursor-pointer'>Start</button>
       </div>
       <div className='flex justify-center items-center h-full mt-20 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10' ref={containerRef}>
-        <SVGComponent className='mt-100 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10 max-md:scale-165' pathRef={pathRef} shipRef={shipRef} />
+        <SVGComponent className='mt-100 max-sm:mt-0 max-md:mt-0 max-lg:mt-0 max-xl:mt-10 max-md:scale-150' pathRef={pathRef} shipRef={shipRef} />
       </div>
       <div className="
       grid 
       grid-cols-2          /* mobile default: 1 column */
       sm:grid-cols-2       /* small screens: 1 column */
       md:grid-cols-2       /* medium screens: 2 columns */
-      gap-25
-      max-sm:gap-10
+      w-full
+      max-sm:gap-13
       max-md:gap-15
       mt-20
-      max-sm:mt-30
-      max-md:mt-30
+      max-sm:mt-11
+      max-md:mt-11
       max-lg:mt-20
       max-xl:mt-10
-      w-[50%]
       max-sm:w-[100%]
       max-md:w-[100%]
       max-lg:w-[100%]
@@ -170,7 +169,7 @@ const ExperienceSection = () => {
             max-w-xs
             mx-auto
           ">
-          <p className="text-center text-sm max-sm:text-[8px] max-md:text-[10px] max-lg:text-[12px] max-xl:text-[12px] w-full max-w-[200px] max:sm:w-[120px] max:md:w-[200px] max:lg:w-[250px] max:xl:w-[250px]">{exp.title}</p>
+          <p className="text-center text-sm max-sm:text-[8px] max-md:text-[10px] max-lg:text-[12px] max-xl:text-[12px] z-100 w-full max-w-[200px] max:sm:w-[110px] max:md:w-[110px] max:lg:w-[250px] max:xl:w-[250px]">{exp.title}</p>
           <img src={exp.image} alt="" className="w-32 h-32 object-cover max-sm:w-16 max-sm:h-16 max-md:w-20 max-md:h-20 max-lg:w-32 max-lg:h-32 max-xl:w-32 max-xl:h-32" />
         </div>
         <div className="block"></div>
